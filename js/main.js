@@ -13,12 +13,15 @@ var hasShownModal;
 var hasAcceptedCookies;
 var modalAd;
 var modalAdContent;
-var modalAdFadeTime = "2s";
 var modalAdTimer;
-var modalAdTimerMilliseconds = 90000;
+var modalAdTimerMilliseconds = 900000;
 var redirect;
-var menu;
-var menuContent;
+var modalNav;
+var modalNavContent;
+var hamburger;
+var hamburgerTop;
+var hamburgerBottom;
+var xOuts;
 
 function onLoad(){
   setUpDOMVariables();
@@ -31,13 +34,11 @@ function onLoad(){
   animate();
   window.addEventListener('scroll', onScroll);
   window.addEventListener('resize', onResize);
-  setUpMenu();
+
   if(!hasAcceptedCookies) {
     setUpCookieNotice();
   }
-  if(!hasShownModal){
-    setUpModalAd();
-  }
+  setUpModals();
   if(hasShownModal){
     if(hasAcceptedCookies){
       setCookie("hasShownModal", "true", 30);
@@ -48,15 +49,62 @@ function onLoad(){
   }
   fixWorkLinkMobile()
 }
+function openModal(modal){
+
+  modal.style.zIndex="5";
+  modal.style.visibility = "visible";
+  modal.style.opacity = 1;
+  let modalId = modal.id;console.log(modalId)
+  let modalContent = document.querySelector("#" + modalId + " .modal-content");
+  modalContent.style.bottom = "0";
+  let modalXOut = document.querySelector("#" + modalId + " .modal-content .x-out");
+  modalXOut.style.opacity=1;
+}
+function closeModal(e){
+  xOut = e.target.parentElement;
+  let modal = xOut.parentElement.parentElement;
+  modal.style.opacity = 0;
+  let modalId = modal.id;
+  let modalContent = document.querySelector("#" + modalId + " .modal-content");
+  modalContent.style.bottom = "100%";
+  let modalXOut = document.querySelector("#" + modalId + " .x-out");
+  modalXOut.style.opacity=0;
+  setTimeout(()=>{
+    modal.style.zIndex="-1";
+    modal.style.visibility = "hidden";
+  }, 1200);
+  if (xOut.id === "x-out-nav"){
+    animateHamburger();
+  }
+}
+function setUpModals(){
+  if(!hasShownModal){
+    setTimeout(()=>{
+      openModal(modalAd);
+    }, modalAdTimerMilliseconds);
+  }
+  hamburger.addEventListener('click', ()=>{
+    openModal(modalNav)
+  });
+  hamburger.addEventListener('click', animateHamburger);
+  xOuts = document.getElementsByClassName('x-out-modal');
+
+  for(let i = 0; i < xOuts.length; i++){
+    xOuts[i].addEventListener('click', closeModal);
+  }
+}
 function setUpDOMVariables(){
-  menuContent = document.getElementById("modal-nav-content");
-  menu = document.getElementById("modal-nav");
+  hamburger = document.getElementById("hamburger");
+  hamburgerTop = document.getElementById("hamburger-top");
+  hamburgerBottom = document.getElementById("hamburger-bottom");
+  modalNavContent = document.getElementById("modal-nav-content");
+  modalNav = document.getElementById("modal-nav");
   modalAd = document.getElementById("modal-ad");
   modalAdContent = document.getElementById("modal-ad-content");
+  xOuts = document.getElementsByClassName("x-out");
   redirect = document.getElementById("redirect");
 }
 function fixWorkLinkMobile(){
-  console.log(navigator.userAgent)
   let works = document.getElementsByClassName("work");
 
   for(let i = 0; i < works.length; i++){
@@ -107,6 +155,7 @@ function smoothScrollTo(destinationOffsetTop){
 function setUpCookieNotice(){
   let acceptCookies = document.getElementById("accept-cookies");
   let rejectCookies = document.getElementById("reject-cookies");
+  let xOutCookies = document.getElementById("x-out-cookies");
 
   acceptCookies.addEventListener("click", closeCookiesNotice);
   acceptCookies.addEventListener("click", ()=>{
@@ -116,6 +165,7 @@ function setUpCookieNotice(){
       setCookie("hasShownModal", "true", 30);
     }
   });
+  xOutCookies.addEventListener("click", closeCookiesNotice);
   rejectCookies.addEventListener("click", closeCookiesNotice);
 }
 function setCookie(cookieName, cookieValue, expireAfterDays){
@@ -151,14 +201,6 @@ function getCookieBoolean(cookieName){
 function closeCookiesNotice(){
   document.getElementById("cookie-notice").style.transform = "translateY(100%)";
 }
-function setUpMenu(){
-  let hamburger = document.getElementById("hamburger");
-  let xOutMenu = document.getElementById("x-out-nav");
-  hamburger.addEventListener('click', showMenu);
-  menu.addEventListener('click', hideMenu);
-  menuContent.addEventListener('click', (e)=>{e.preventDefault();});
-  xOutMenu.addEventListener('click', hideMenu);
-}
 function animateHamburger(){
   if(!menuIsShowing){
     hamburgerTop.style.transform = "rotate(-45deg)";
@@ -176,59 +218,9 @@ function animateHamburger(){
     hamburgerTop.style.opacity = "1";
     hamburgerBottom.style.opacity = "1";
   }
-}
-function showMenu(){
-  if(!menuIsShowing){
-    menu.style.visibility = "visible";
-    menu.style.zIndex = "5";
-    menu.style.opacity = ".95";
-  }
-  animateHamburger();
   menuIsShowing = !menuIsShowing;
 }
-function hideMenu(){
-  if(menuIsShowing) {
-    menu.style.opacity = "0";
-    setTimeout(()=>{
-      menu.style.visibility = "hidden";
-      menu.style.zIndex="-1";
-    }, 800);
-  }
-  animateHamburger();
-  menuIsShowing = !menuIsShowing;
-}
-function setUpModalAd(){
-  if(!hasShownModal){
-    let contentTop = modalAdContent.getBoundingClientRect().top;
-    let contentHeight = modalAdContent.offsetHeight;
-    let contentTransform = "translateY(-" + (contentTop + contentHeight) + "px)";
 
-    modalAdContent.style.transform = contentTransform;
-
-    modalAdTimer = setTimeout(()=>{
-      openModalAd();
-    }, modalAdTimerMilliseconds);
-    document.getElementById("x-out-modal").addEventListener('click', closeModalAd);
-  }
-}
-function openModalAd(){
-  if(!hasShownModal){
-    modalAd.style.animationName = "fadeIn";
-    modalAd.style.animationDuration = modalAdFadeTime;
-    modalAd.style.visibility = "visible";
-    modalAdContent.style.transition = "transform .8s ease-out .8s";
-    modalAdContent.style.transform = "translateY(0)";
-
-    if(hasAcceptedCookies){
-      setCookie("hasShownModal", "true", 30);
-    }
-  }
-  hasShownModal = true;
-}
-function closeModalAd(){
-  modalAd.style.visibility = "hidden";
-  clearTimeout(modalAdTimer);
-}
 function onResize(){
   animate();
   cancelTimer();
@@ -277,6 +269,6 @@ function onScroll(){
 function cancelTimer(){
   clearTimeout(modalAdTimer);
   modalAdTimer = setTimeout(()=>{
-    openModalAd();
+    openModal(modalAd);
   }, modalAdTimerMilliseconds);
 }

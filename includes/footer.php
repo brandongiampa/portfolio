@@ -13,7 +13,7 @@
         <input type="email" name="email-footer" id="email-footer"><br>
         <label for="message">Message</label><br>
         <textarea name="message-footer" id="message-footer" cols="30" rows="10"></textarea><br>
-        <input class="btn-purple" type="submit" value="Send" name="submit-footer">
+        <input class="btn btn-purple" type="submit" value="Send" name="submit-footer">
       </form>
     </div>
     <div class="copyright">

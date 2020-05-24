@@ -16,7 +16,6 @@
 </head>
 <body>
   <main>
-    <?php include_once 'ad-modal.php';?>
     <a href="#footer-message">
       <div id="message-me">
         <i class="fas fa-envelope"></i>
@@ -33,5 +32,6 @@
         <div class="line" id="hamburger-bottom"></div>
       </div>
     </header>
-  <?php include_once 'nav-modal.php';?>
-<?php include_once 'cookie-notice.php';?>
+    <?php include_once 'nav-modal.php';?>
+    <?php include_once 'cookie-notice.php';?>
+    <?php include_once 'ad-modal.php';?>

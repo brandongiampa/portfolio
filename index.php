@@ -33,8 +33,7 @@
         <h1>Do you need a website?</h1>
         <p>Look no further.</p>
         <div class="hero-links">
-          <a href="#portfolio-section" class="btn btn-blue">Learn More</a>
-          <a href="portfolio.php" class="btn btn-purple">Skip to Portfolio &raquo;</a>
+          <a href="portfolio.php" class="btn btn-purple">View Portfolio &raquo;</a>
         </div>
       </div>
     </div>
@@ -78,9 +77,9 @@
             </a>
             <div class="work-overlay">
               <div class="work-links">
-                <a href="work.php?work=<?php echo $row['link'];?>" class="btn"><i class="fas fa-info-circle"></i>About</a>
-                <a href="<?php echo $row['github'];?>" class="btn"><i class="fab fa-github"></i>Github</a>
-                <a href="https://brandongiampa.com/<?php echo $row['link'];?>" class="btn"><i class="fas fa-eye"></i>View</a>
+                <a href="work.php?work=<?php echo $row['link'];?>" class="btn btn-transparent"><i class="fas fa-info-circle"></i>About</a>
+                <a href="<?php echo $row['github'];?>" class="btn btn-transparent"><i class="fab fa-github"></i>Github</a>
+                <a href="https://brandongiampa.com/<?php echo $row['link'];?>" class="btn btn-transparent"><i class="fas fa-eye"></i>View</a>
               </div>
             </div>
           </div>
@@ -112,19 +111,6 @@
       </div>
       <div class="about-b fade-in animated" id="technologies-used">
         <?php include_once 'includes/technologies-used.php';?>
-        <!--
-        <h3>Technologies Used</h3>
-        <div class="technologies">
-          <div class="technology"><i class="fab fa-html5"></i><br> HTML5</div>
-          <div class="technology"><i class="fab fa-css3-alt"></i><br> CSS3</div>
-          <div class="technology"><i class="fab fa-js-square"></i><br> Javascript</div>
-          <div class="technology"><i class="fab fa-php"></i><br> PHP</div>
-          <div class="technology"><i class="fas fa-database"></i><br> mySQL</div>
-          <div class="technology"><i class="fab fa-wordpress"></i><br> WordPress</div>
-          <div class="technology"><i class="fab fa-bootstrap"></i><br> Bootstrap</div>
-          <div class="technology"><i class="fab fa-sass"></i><br> Sass</div>
-          <div class="technology"><i class="fab fa-git"></i><br> Git</div>
-        </div>-->
       </div>
     </section>
 <?php include_once 'includes/footer.php';?>

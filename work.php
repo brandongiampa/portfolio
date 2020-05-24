@@ -1,5 +1,4 @@
 <?php include_once 'database/db.php';?>
-<?php if (isset($_GET['work'])){echo $_GET['work'];}?>
 <?php include_once 'includes/header.php';?>
 <style>
   header {

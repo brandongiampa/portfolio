@@ -59,33 +59,28 @@ button:hover{
   cursor: pointer;
 }
 .btn {
+  border: 2px #ffefff solid;
+  border-radius:3px;
   padding: 5px 9px;
   margin-right: 8px;
   margin-top: 4px;
-  border: 1px #ffefff solid;
-  font-size: 18px;
+  font-size: 20px;
+  text-shadow: -1px -1px #000e00;
+  box-shadow: -2px -2px #000e00;
 }
 .btn-purple {
   background-color: #7100ff;
-  box-shadow: -2px -2px #000e00;
   color: #ffefff;
-}
-.btn-white-outline {
-  padding: 3px 7px;
-  color: #ffefff;
-  border: 3px #ffefff solid;
-  box-shadow: -1px -1px #000e00;
 }
 .btn-blue {
   color: #ffefff;
   background-color: #000eff;
-  box-shadow: -1px -1px #000e00;
 }
 .btn-transparent{
-  padding: 3px 7px;
   color: #ffefff;
-  border: 3px #000e00 solid;
-  background-color: inherit;
+  border:none;
+  box-shadow:none;
+  background-color:transparent;
 }
 .underline {
   width: 44px;
@@ -136,6 +131,9 @@ h6 {
   letter-spacing: 1px;
   font-size: 11px;
 }
+p{
+  font-size:18;
+}
 /*
 =================
 ==     SVG     ==
@@ -185,52 +183,6 @@ header {
 ==      Menu      ==
 ====================
 */
-#modal-nav{
-  visibility: hidden;
-  background-color: #7100ff;
-  height: 100vh;
-  width: 100%;
-  position: fixed;
-  left: 0;
-  opacity: 0;
-  transition: opacity .6s ease-in;
-  box-shadow: 1px 1px 3px #000e00;
-  padding-top: 12px;
-  z-index: -1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#modal-nav-content{
-  background-color: #000e00;
-  position: relative;
-  padding: 0 24px;
-  border:4px #7100ff solid;
-  box-shadow: -1px -1px 8px #eee;
-}
-#x-out-nav {
-  position: absolute;
-  right: 0;
-  color: white;
-  font-size: 80px;
-  line-height: 44px;
-  margin: 0 8px;
-}
-#x-out-nav:hover {
-  cursor: pointer;
-  color: #eeefee;
-}
-#modal-nav ul, #modal-nav li {
-  padding: 8px 12px;
-  margin: 0;
-}
-#modal-nav li{
-  font-size: 44px;
-  border-bottom: 1px white dashed;
-}
-#modal-nav li a {
-  color: white;
-}
 /*
 ===================
 ==    Cookies    ==
@@ -278,7 +230,7 @@ header {
   color: #0eff00;
 }
 .red-text{
-  color: #FF000E;
+  color: #FFF100;
 }
 .fa-times {
   font-size: 1.4em;
@@ -288,17 +240,28 @@ header {
 ==     Modals     ==
 ====================
 */
-.modal {
-  visibility: hidden;
-  z-index: 5;
-  position: absolute;
+.modal{
+  background-color: #7100ff;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: opacity .6s ease-in;
+  box-shadow: 1px 1px 3px #000e00;
+  padding-top: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+  color: #ffefff;
 }
 .modal-bg {
   background-position: center;
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url(../img/thinking.jpg);
 }
 .modal-opaque {
   position: fixed;
@@ -308,30 +271,69 @@ header {
   height: 100%;
   background-color: #000eff8a;
 }
-#modal-ad {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ffefff;
-  animation: none;
+.modal-content {
+  transition: all 1.2s;
+  z-index: 1;
+  position: relative;
+  bottom:100%;
+  padding: 24px;
+  background-color: #000e00dd;
 }
-#x-out-modal {
+.modal-content h2{
+  padding-top: 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px #008eff solid;
+}
+#modal-nav-content h2{
+  margin-top: 44px;
+  padding: 4px;
+}
+.x-out {
   position: absolute;
-  right: 0;
-  color: white;
-  font-size: 56px;
-  line-height: 44px;
-  margin: -24px 12px;
-  transition: color .3s;
+  right: 8px;
+  top:8px;
+  color: #000e00;
+  font-size: 16px;
+  background-color: #ffefff;
+  border-radius: 50%;
+  transition: all .2s;
 }
-#x-out-modal:hover {
+.x-out:hover {
   cursor: pointer;
-  color: #eeefee;
+}
+.x-out i{
+  padding: 2px 5px;
+}
+#modal-nav ul{
+  padding:0;
+  margin: 0;
+}
+#modal-nav li{
+  margin: 4px;
+  padding:4px;
+  font-size: 44px;
+  border-bottom: 1px white dashed;
+}
+#modal-nav li:last-of-type{
+  border-bottom:none;
+}
+#modal-nav li a {
+  color: white;
+}
+#modal-ad-bg{
+  background-image: url(../img/thinking.jpg);
+}
+#modal-nav-bg{
+  background-image: url(../img/code.jpg);
+}
+#modal-ad-content h4{
+  font-size: 26px;
+  margin-top: 4px;
+  margin-bottom: 16px;
+}
+#modal-ad-content input[type=email], #modal-ad-content input[type=text], #modal-ad-content textarea{
+  width: 100%;
+  margin-bottom: 4px;
 }
 #x-top{
   position: relative;
@@ -347,26 +349,6 @@ header {
   top: 21px;
   transform: rotate(45deg);
   -moz-transform: rotate(50%);
-}
-#modal-ad-content {
-  z-index: 1;
-  position: relative;
-  padding: 24px;
-  background-color: #000e00dd;
-}
-#modal-ad-content h2{
-  padding-top: 8px;
-  padding-bottom: 6px;
-  border-bottom: 1px #008eff solid;
-}
-#modal-ad-content h4{
-  font-size: 26px;
-  margin-top: 4px;
-  margin-bottom: 16px;
-}
-#modal-ad-content input[type=email], #modal-ad-content input[type=text], #modal-ad-content textarea{
-  width: 100%;
-  margin-bottom: 4px;
 }
 /*
 ========================
@@ -465,7 +447,6 @@ header {
 }
 .profile {
   padding: 24px;
-  padding-bottom: 56px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -478,14 +459,6 @@ header {
 .profile-text {
   position:relative;
   margin: auto;
-}
-.profile-img-div {
-  position: relative;
-  z-index: 1;
-}
-.tech-png {
-  max-width: 56px;
-  position: absolute;
 }
 .social-links{
   display: flex;
@@ -502,13 +475,13 @@ header {
 .social-links a i {
   font-size: 42px;
 }
-.profile-img {
-  margin-top:16px;
-  width: 224px;
-  border-radius: 1%;
+.profile-img-div {
   position: relative;
   z-index: 1;
-  box-shadow: -1px -1px 4px #000e00;
+}
+.profile-img {
+  height:0;
+  width:0;
 }
 /*
 ======================
@@ -622,7 +595,7 @@ header {
   font-size: 14px;
   font-weight: 400;
 }
-back-to-portfolio a {
+.back-to-portfolio a {
   color: #7100ff;
 }
 .work-display-links a:first-child, .work-display-links:first-child a i {
@@ -639,6 +612,7 @@ back-to-portfolio a {
 .about-section-text p {
   padding: 0 16px 16px 16px;
   margin-bottom: 24px;
+  font-size: 18px;
 }
 #technologies-used {
   background-color: #eeefee;
@@ -757,7 +731,11 @@ input[type=submit]{
 ==     Company Logo Colors    ==
 ================================
 */
-.fa-github:hover {
+.social-links a i.fa-linkedin{
+  color:#000eff;
+  color: #0e76a8;
+}
+.social-links .fa-github, footer .fa-github:hover{
   color: #211F1F;
 }
 .fa-linkedin:hover{
@@ -777,6 +755,7 @@ input[type=submit]{
   .profile{
     flex-direction: row;
     justify-content: space-around;
+    padding-bottom: 56px;
   }
   .profile-text{
     margin: 0;
@@ -787,8 +766,14 @@ input[type=submit]{
   .profile-img-div{
     margin: 0;
   }
-  .profile-img-div img{
-    margin-top: 24px;
+  .profile-img {
+    margin-top:16px;
+    margin-top:24px;
+    width: 224px;
+    border-radius: 1%;
+    position: relative;
+    z-index: 1;
+    box-shadow: -1px -1px 4px #000e00;
   }
 }
 @media only screen and (min-width: 800px){
@@ -809,6 +794,7 @@ input[type=submit]{
   .about-section-text p{
     padding-left: 24px;
     padding-right: 24px;
+    font-size: 20px;
   }
   .img-carousel {
     float: left;
@@ -832,7 +818,7 @@ input[type=submit]{
     font-size: 32px;
   }
   p {
-    font-size: 18px;
+    font-size: 20px;
   }
   .hero-text h1{
     font-size: 46px;
