@@ -88,8 +88,8 @@
         }?>
       </div>
       <div class="link-strip fade-in fast animated">
-        Do you want to view all of Brandon's work?
-        <a href="portfolio.php">View Portfolio</a>
+        <h2>Do you want to view all of Brandon's work?</h2>
+        <a class="btn btn-purple" href="portfolio.php">View Portfolio</a>
       </div>
     </section>
     <section id="about-section">

@@ -464,7 +464,6 @@ header {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin-bottom: 16px;
 }
 .social-links a{
   margin: 8px 16px;
@@ -531,14 +530,14 @@ header {
   margin: 8px;
 }
 .link-strip {
-  margin: 0px 0 8px;
+  font-size:24px;
   color: #ffefff;
   background-color: #008eff;
   text-align: center;
-  padding: 8px;
+  padding: 12px 12px 40px 12px;
 }
-.link-strip a {
-  color: #000eff;
+.link-strip h2{
+  font-size: 24px;
 }
 .divider {
   padding: 24px;
@@ -625,7 +624,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 .technology {
   font-size: 16px;
@@ -731,11 +730,13 @@ input[type=submit]{
 ==     Company Logo Colors    ==
 ================================
 */
-.social-links a i.fa-linkedin{
+.social-links .fa-linkedin{
   color:#000eff;
-  color: #0e76a8;
 }
-.social-links .fa-github, footer .fa-github:hover{
+.social-links .fa-github{
+  color:#7100ff;
+}
+footer .fa-github:hover{
   color: #211F1F;
 }
 .fa-linkedin:hover{
@@ -769,11 +770,15 @@ input[type=submit]{
   .profile-img {
     margin-top:16px;
     margin-top:24px;
+    height:auto;
     width: 224px;
     border-radius: 1%;
     position: relative;
     z-index: 1;
     box-shadow: -1px -1px 4px #000e00;
+  }
+  .link-strip h2{
+    font-size: 32px;
   }
 }
 @media only screen and (min-width: 800px){
