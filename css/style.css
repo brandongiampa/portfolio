@@ -72,10 +72,6 @@ button:hover{
   background-color: #7100ff;
   color: #ffefff;
 }
-.btn-blue {
-  color: #ffefff;
-  background-color: #000eff;
-}
 .btn-transparent{
   color: #ffefff;
   border:none;
@@ -589,16 +585,8 @@ header {
   list-style: square;
 }
 .back-to-portfolio {
-  padding: 14px;
+  padding: 28px 0 24px 0;
   text-align: center;
-  font-size: 14px;
-  font-weight: 400;
-}
-.back-to-portfolio a {
-  color: #7100ff;
-}
-.work-display-links a:first-child, .work-display-links:first-child a i {
-
 }
 .work-display-links a:last-child, .work-display-links:last-child a i {
   color: #008eff;

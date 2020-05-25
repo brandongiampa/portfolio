@@ -121,7 +121,7 @@
         <?php
     ?>
     <div class="back-to-portfolio fade-in fast animated">
-      <a href="portfolio.php">&larr; Back to Portfolio</a>
+      <a class="btn btn-purple" href="portfolio.php">&larr; Back to Portfolio</a>
     </div>
     <?php
   else:
