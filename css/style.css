@@ -585,7 +585,7 @@ header {
   list-style: square;
 }
 .back-to-portfolio {
-  padding: 28px 0 24px 0;
+  padding: 12px 0 8px 0;
   text-align: center;
 }
 .work-display-links a:last-child, .work-display-links:last-child a i {
@@ -766,7 +766,7 @@ footer .fa-github:hover{
     box-shadow: -1px -1px 4px #000e00;
   }
   .link-strip h2{
-    font-size: 32px;
+    font-size: 28px;
   }
 }
 @media only screen and (min-width: 800px){
