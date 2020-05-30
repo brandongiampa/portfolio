@@ -12,7 +12,7 @@
       <input type="email" name="email-modal" id="email-modal" required><br>
       <label for="message">Message</label><br>
       <textarea name="message-modal" id="message-modal" cols="30" rows="10" required></textarea><br>
-      <input class="btn btn-blue" type="submit" value="Send" name="submit-modal">
+      <input class="btn btn-purple" type="submit" value="Send" name="submit-modal">
     </form>
   </div>
 </div>
