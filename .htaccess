@@ -1,5 +1,7 @@
 ErrorDocument 404 http://192.168.1.232:8080/newportfolio/404.php
 RewriteEngine On
-RewriteRule ^work/([0-9a-zA-Z]+)$ work.php?work=$1 [L]
+
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule work/(.*)$ work.php?work=$1 [QSA]
+RewriteRule ^([^\.]+)$ $1.php [L,NC]
