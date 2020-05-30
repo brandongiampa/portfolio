@@ -1,5 +1,5 @@
+<?php include_once 'includes/header.php';?>
 <?php
-  include_once 'database/db.php';
 
   $DB = DB::connect();
 
@@ -33,7 +33,6 @@
   }
 ?>
 
-<?php include_once 'includes/header.php';?>
 <div class="hero-image2 fade-in animated">
   <div class="hero-bg-small" id="hero-portfolio"></div>
   <div class="hero-opaque"></div>
@@ -52,12 +51,12 @@
         $animationClass = $i % 2 === 0 ? 'fade-from-left animated' : 'fade-from-right animated';
       ?>
       <div class="work <?php echo $animationClass;?>" id="work-<?php echo $i+1;?>">
-        <a href="work.php?work=<?php echo $row['link'];?>">
-          <img src="img/<?php echo $row['img'];?>" alt="">
+        <a href="<?php  echo $site_url;?>work/<?php echo $row['link'];?>">
+          <img src="<?php  echo $site_url;?>img/<?php echo $row['img'];?>" alt="">
         </a>
         <div class="work-overlay">
           <div class="work-links">
-            <a href="work.php?work=<?php echo $row['link'];?>" class="btn btn-transparent"><i class="fas fa-info-circle"></i>About</a>
+            <a href="<?php  echo $site_url;?>work/<?php echo $row['link'];?>" class="btn btn-transparent"><i class="fas fa-info-circle"></i>About</a>
             <a href="<?php echo $row['github'];?>" class="btn btn-transparent"><i class="fab fa-github"></i>Github</a>
             <a href="https://brandongiampa.com/<?php echo $row['link'];?>" class="btn btn-transparent"><i class="fas fa-eye"></i>View</a>
           </div>

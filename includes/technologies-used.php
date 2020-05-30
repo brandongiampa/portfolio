@@ -1,12 +1,4 @@
 <?php
-  try{
-    include_once 'database/db.php';
-  }
-  catch(Exception $ex){
-    echo "Unfortunately, an error occurred.";
-  }
-?>
-<?php
 try{
     $db = DB::connect();
     $query = $db->prepare("SELECT * FROM tbl_languages_and_technologies ORDER BY priority, id");

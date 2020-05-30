@@ -22,6 +22,7 @@
   </div>
 </footer>
 </main>
-<script src="js/main.js" type="text/javascript"></script>
+<?php $jsFile = !isset($_GET['work']) ? "js/main.js" : "../js/main.js"; ?>
+<script src="<?php echo $jsFile;?>" type="text/javascript"></script>
 </body>
 </html>

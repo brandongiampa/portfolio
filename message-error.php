@@ -8,7 +8,7 @@
 
 <div class="container message-response">
   <p class="green-text"><?php echo $str;?></p>
-  <a href="index.php" class="btn btn-purple">Home</a>
+  <a href="<?php  echo $site_url;?>" class="btn btn-purple">Home</a>
 </div>
 
 <?php include_once 'includes/footer.php';?>

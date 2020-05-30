@@ -1,4 +1,3 @@
-<?php include_once 'database/db.php';?>
 <?php include_once 'includes/header.php';?>
 <style>
   header {
@@ -28,7 +27,7 @@
           $query->execute();
 
           if($query->rowCount() < 1){
-            echo 'Project not found.';
+            echo 'Project not found. ' . ($_GET['work']);
           }
 
           $row = $query->fetch(PDO::FETCH_ASSOC);
@@ -37,7 +36,7 @@
           $tagline = $row['tagline'];
           $link = 'https://brandongiampa.com/' . $row['link'];
           $github = $row['github'];
-          $img = 'img/' . $row['img'];
+          $img = $site_url . 'img/' . $row['img'];
           $objective = $row['objective'];
 
           $hashtags = $query->fetch(PDO::FETCH_ASSOC);
@@ -121,7 +120,7 @@
         <?php
     ?>
     <div class="back-to-portfolio fade-in fast animated">
-      <a class="btn btn-purple" href="portfolio.php">&larr; Back to Portfolio</a>
+      <a class="btn btn-purple" href="<?php  echo $site_url;?>portfolio">&larr; Back to Portfolio</a>
     </div>
     <?php
   else:

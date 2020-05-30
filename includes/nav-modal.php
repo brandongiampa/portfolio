@@ -8,9 +8,9 @@
     <h2>Menu</h2>
     <nav id="nav-main">
       <ul>
-        <li><a href="index.php">Home</a></li>
-        <li><a href="about.php">About</a></li>
-        <li><a href="portfolio.php">Portfolio</a></li>
+        <li><a href="<?php  echo $site_url;?>">Home</a></li>
+        <li><a href="<?php  echo $site_url;?>about">About</a></li>
+        <li><a href="<?php  echo $site_url;?>portfolio">Portfolio</a></li>
       </ul>
     </nav>
   </div>

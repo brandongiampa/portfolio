@@ -1,4 +1,4 @@
-<?php include_once 'database/db.php';?>
+<?php include_once 'includes/header.php';?>
 <?php
   $db = DB::connect();
   $query = $db->prepare('SELECT content FROM pages WHERE name = :name');
@@ -8,7 +8,6 @@
 
   $output = $query->fetch(PDO::FETCH_ASSOC);
 ?>
-<?php include_once 'includes/header.php';?>
 <style>
   header {
     border-bottom: 1px var(--primaryColor) solid;
@@ -34,7 +33,7 @@
   -->
   </div>
   <div class="back-to-portfolio fade-in fast animated">
-    <a href="portfolio.php">View Portfolio &rarr;</a>
+    <a href="<?php  echo $site_url;?>portfolio">View Portfolio &rarr;</a>
   </div>
   <div class="about-b fade-in animated" id="technologies-used">
     <?php include_once 'includes/technologies-used.php';?>

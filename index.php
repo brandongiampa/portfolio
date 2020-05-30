@@ -1,6 +1,5 @@
+<?php include_once 'includes/header.php';?>
 <?php
-  include_once 'database/db.php';
-
   $DB = DB::connect();
 
   $upperLimit = 4;
@@ -24,8 +23,6 @@
     $projectMessage = 'There was an error retrieving the projects. Please contact the site administrator if the problem continues after reloading.';
   }
 ?>
-
-<?php include_once 'includes/header.php';?>
     <div class="hero-image fade-in animated">
       <div class="hero-bg"></div>
       <div class="hero-opaque"></div>
@@ -33,7 +30,7 @@
         <h1>Do you need a website?</h1>
         <p>Look no further.</p>
         <div class="hero-links">
-          <a href="portfolio.php" class="btn btn-purple">View Portfolio &raquo;</a>
+          <a href="<?php  echo $site_url;?>portfolio" class="btn btn-purple">View Portfolio &raquo;</a>
         </div>
       </div>
     </div>
@@ -50,7 +47,7 @@
           </div>
         </div>
         <div class="profile-img-div fade-from-right animated">
-          <img src="img/face.jpg" class="profile-img" alt="">
+          <img src="<?php  echo $site_url;?>img/face.jpg" class="profile-img" alt="">
         </div>
       </div>
     </div>
@@ -72,14 +69,14 @@
             }
           ?>
           <div class="work <?php echo $animationClass;?>" id="work-<?php echo $i+1;?>">
-            <a href="work.php?work=<?php echo $row['link'];?>">
-              <img src="img/<?php echo $row['img'];?>" alt="">
+            <a href="<?php  echo $site_url;?>work/<?php echo $row['link'];?>">
+              <img src="<?php  echo $site_url;?>img/<?php echo $row['img'];?>" alt="">
             </a>
             <div class="work-overlay">
               <div class="work-links">
-                <a href="work.php?work=<?php echo $row['link'];?>" class="btn btn-transparent"><i class="fas fa-info-circle"></i>About</a>
+                <a href="<?php  echo $site_url;?>work/<?php echo $row['link'];?>" class="btn btn-transparent"><i class="fas fa-info-circle"></i>About</a>
                 <a href="<?php echo $row['github'];?>" class="btn btn-transparent"><i class="fab fa-github"></i>Github</a>
-                <a href="https://brandongiampa.com/<?php echo $row['link'];?>" class="btn btn-transparent"><i class="fas fa-eye"></i>View</a>
+                <a href="https://<?php echo $row['link'];?>.brandongiampa.com/" class="btn btn-transparent"><i class="fas fa-eye"></i>View</a>
               </div>
             </div>
           </div>
@@ -89,7 +86,7 @@
       </div>
       <div class="link-strip fade-in fast animated">
         <h2>Do you want to view all of Brandon's work?</h2>
-        <a class="btn btn-purple" href="portfolio.php">View Portfolio</a>
+        <a class="btn btn-purple" href="<?php  echo $site_url;?>portfolio">View Portfolio</a>
       </div>
     </section>
     <section id="about-section">
@@ -107,7 +104,7 @@
 
           $output = $query->fetch(PDO::FETCH_ASSOC);
         ?>
-        <p><?php echo $output['excerpt'];?>... <a href="about.php">Learn more</a></p>
+        <p><?php echo $output['excerpt'];?>... <a href="<?php  echo $site_url;?>about">Learn more</a></p>
       </div>
       <div class="about-b fade-in animated" id="technologies-used">
         <?php include_once 'includes/technologies-used.php';?>
