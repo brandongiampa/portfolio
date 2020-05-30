@@ -15,6 +15,7 @@
   <meta name="keywords" content="Web Developer, Full Stack Developer, Front End Developer, PHP Developer, Wordpress Developer, Orange County, Los Angeles, Brandon Giampa, Brandon Jump">
   <meta name="description" content="Portfolio of Brandon Giampa">
   <meta name="author" content="Brandon Giampa">
+  <link rel="icon" href="../icons/icon2.png">
 </head>
 <body>
   <main>
