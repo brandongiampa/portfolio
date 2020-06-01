@@ -7,7 +7,7 @@
 
   try{
     $query = $DB->prepare(
-      'SELECT id, name, link, github, img FROM project ORDER BY id DESC LIMIT :limit'
+      'SELECT id, name, link, url, github, img FROM project ORDER BY id DESC LIMIT :limit'
     );
     $query->bindParam(':limit', $upperLimit, PDO::PARAM_INT);
     $query->execute();
@@ -76,7 +76,7 @@
               <div class="work-links">
                 <a href="<?php  echo $site_url;?>work/<?php echo $row['link'];?>" class="btn btn-transparent"><i class="fas fa-info-circle"></i>About</a>
                 <a href="<?php echo $row['github'];?>" class="btn btn-transparent"><i class="fab fa-github"></i>Github</a>
-                <a href="https://<?php echo $row['link'];?>.brandongiampa.com/" class="btn btn-transparent"><i class="fas fa-eye"></i>View</a>
+                <a href="<?php echo $row['url'];?>" class="btn btn-transparent"><i class="fas fa-eye"></i>View</a>
               </div>
             </div>
           </div>
