@@ -76,7 +76,7 @@
             <div class="underline"></div>
             <h3><?php echo $tagline;?></h3>
             <div class="work-display-links">
-              <a href="<?php echo $link;?>"><i class="fas fa-eye"></i> <span class="site-link">View Site</span></a>
+              <a href="<?php echo $url;?>"><i class="fas fa-eye"></i> <span class="site-link">View Site</span></a>
               <a href="<?php echo $github;?>" class="repo-link"><i class="fab fa-github"></i> Github</a>
             </div>
             <p><span class="description-header">Description:</span>

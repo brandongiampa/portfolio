@@ -15,7 +15,7 @@
     $projectMessage = '';
 
     $query = $DB->prepare(
-      'SELECT id, name, link, github, img FROM project ORDER BY id DESC LIMIT :limit OFFSET :offset'
+      'SELECT id, name, url, link, github, img FROM project ORDER BY id DESC LIMIT :limit OFFSET :offset'
     );
     $query->bindParam(':limit', $upperLimit, PDO::PARAM_INT);
     $query->bindParam(':offset', $offset, PDO::PARAM_INT);
