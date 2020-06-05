@@ -34,6 +34,8 @@
 
           $workId = $row['id'];
           $tagline = $row['tagline'];
+          $img_path = $row['img_path'];
+          $url = $row['url'];
           $link = 'https://brandongiampa.com/' . $row['link'];
           $github = $row['github'];
           $img = $site_url . 'img/' . $row['img'];
@@ -55,7 +57,7 @@
 
           <div class="img-carousel fade-from-left animated">
             <div class="img-carousel-wrap">
-              <img src="<?php echo $img;?>" alt="">
+              <img src="<?php echo $img_path;?>" alt="">
             </div>
           </div>
           <div class="work-description fade-in fast animated">

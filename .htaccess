@@ -1,4 +1,4 @@
-ErrorDocument 404 http://192.168.1.232:8080/newportfolio/404.php
+ErrorDocument 404 https://brandongiampa.com/404.php
 RewriteEngine On
 
 RewriteCond %{REQUEST_FILENAME} !-d

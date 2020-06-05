@@ -115,7 +115,7 @@ function fixWorkLinkMobile(){
 }
 function setUpRedirect(sec){
   if(sec < 0){
-    window.location = "index.php";
+    window.location = "https://brandongiampa.com";
   }
   else {
     setTimeout(()=>{
