@@ -9,7 +9,7 @@
   }
 
   if(isset($_POST['submit-modal'])||isset($_POST['submit-footer'])){
-    $to = "brandongiampa555@gmail.com";
+    $to = "me@brandongiampa.com";
     $subject = "Dev Inquiry";
     $txt = $message;
     $headers = "From: " . $email . "\r\n";
