@@ -54,7 +54,7 @@ function openModal(modal){
   modal.style.zIndex="5";
   modal.style.visibility = "visible";
   modal.style.opacity = 1;
-  let modalId = modal.id;console.log(modalId)
+  let modalId = modal.id;
   let modalContent = document.querySelector("#" + modalId + " .modal-content");
   modalContent.style.bottom = "0";
   let modalXOut = document.querySelector("#" + modalId + " .modal-content .x-out");
