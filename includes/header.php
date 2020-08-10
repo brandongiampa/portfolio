@@ -16,6 +16,7 @@
   <meta name="description" content="Portfolio of Brandon Giampa">
   <meta name="author" content="Brandon Giampa">
   <link rel="icon" href="../icons/icon2.png">
+  <script data-ad-client="ca-pub-8145132171809817" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 <body>
   <main>
