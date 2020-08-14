@@ -426,10 +426,10 @@ header {
 ====================
 */
 .profile-bg{
-  background-size: 70%;
+  background-size: 100%;
   background-position:center;
   position:relative;
-  background-image:url(../img/stonebg-min.jpg);
+  background-color: #eeefee;
 }
 .profile-bg::before{
   content:"";
