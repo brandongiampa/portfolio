@@ -22,7 +22,7 @@
   </div>
 </footer>
 </main>
-<?php $jsFile = !isset($_GET['work']) ? "js/main-min.js" : "../js/main-min.js"; ?>
-<script src="<?php echo $jsFile;?>" type="text/javascript"></script>
+<?php $jsFile = !isset($_GET['work']) ? "js/main.js" : "../js/main-min.js"; ?>
+<script src="<?php echo $jsFile;?>" type="text/javascript" defer></script>
 </body>
 </html>

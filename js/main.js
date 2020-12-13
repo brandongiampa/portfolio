@@ -1,16 +1,5 @@
-if (
-    document.readyState === "complete" ||
-    (document.readyState !== "loading" && !document.documentElement.doScroll)
-) {
-  onLoad();
-} else {
-  document.addEventListener("DOMContentLoaded", onLoad);
-}
-
 var isScrolling = false;
 var menuIsShowing = false;
-var hasShownModal;
-var hasAcceptedCookies;
 var modalAd;
 var modalAdContent;
 var modalAdTimer;
@@ -23,34 +12,22 @@ var hamburgerTop;
 var hamburgerBottom;
 var xOuts;
 
-function onLoad(){
-  setUpDOMVariables();
-  hasShownModal = getCookieBoolean("hasShownModal") ? true : false;
-  hasAcceptedCookies = getCookieBoolean("hasAcceptedCookies") ? true : false;
-  setSmoothScroll();
-  if(hasAcceptedCookies){
-    document.getElementById("cookie-notice").style.visibility = "hidden";
-  }
-  animate();
-  window.addEventListener('scroll', onScroll);
-  window.addEventListener('resize', onResize);
+console.log( modalAdTimerMilliseconds )
+setUpDOMVariables();
+setSmoothScroll();
+animate();
+window.addEventListener('scroll', onScroll);
+window.addEventListener('resize', onResize);
 
-  if(!hasAcceptedCookies) {
-    setUpCookieNotice();
-  }
-  setUpModals();
-  if(hasShownModal){
-    if(hasAcceptedCookies){
-      setCookie("hasShownModal", "true", 30);
-    }
-  }
-  if(redirect !== null){
-    setUpRedirect(5);
-  }
-  fixWorkLinkMobile()
+setUpModals();
+
+if(redirect !== null){
+  setUpRedirect(5);
 }
-function openModal(modal){
+fixWorkLinkMobile()
 
+function openModal(modal){
+  console.log( "openmodal")
   modal.style.zIndex="5";
   modal.style.visibility = "visible";
   modal.style.opacity = 1;
@@ -78,11 +55,11 @@ function closeModal(e){
   }
 }
 function setUpModals(){
-  if(!hasShownModal){
-    setTimeout(()=>{
-      openModal(modalAd);
-    }, modalAdTimerMilliseconds);
-  }
+  console.log(menuIsShowing)
+  setTimeout(()=>{
+    openModal(modalAd);
+  }, modalAdTimerMilliseconds);
+
   hamburger.addEventListener('click', ()=>{
     openModal(modalNav)
   });
@@ -152,55 +129,6 @@ function smoothScrollTo(destinationOffsetTop){
     }
   });
 }
-function setUpCookieNotice(){
-  let acceptCookies = document.getElementById("accept-cookies");
-  let rejectCookies = document.getElementById("reject-cookies");
-  let xOutCookies = document.getElementById("x-out-cookies");
-
-  acceptCookies.addEventListener("click", closeCookiesNotice);
-  acceptCookies.addEventListener("click", ()=>{
-    setCookie("hasAcceptedCookies", "true", 90);
-    hasAcceptedCookies = true;
-    if(hasShownModal){
-      setCookie("hasShownModal", "true", 30);
-    }
-  });
-  xOutCookies.addEventListener("click", closeCookiesNotice);
-  rejectCookies.addEventListener("click", closeCookiesNotice);
-}
-function setCookie(cookieName, cookieValue, expireAfterDays){
-  let d = new Date()
-  d.setTime(d.getTime() + (expireAfterDays * 24 * 60 * 60 *1000));
-  let expires = d.toUTCString();
-  let output = cookieName + "=" + cookieValue + "; " + "expires=" + expires + "; path=/; sameSite=Strict";
-  document.cookie = output;
-}
-function getCookie(cookieName){
-  let name = cookieName + "=";
-  let decodedCookie = decodeURIComponent(document.cookie);
-  let cookieStringArray = decodedCookie.split('; ');
-  let len = cookieName.length;
-
-  for(let i = 0; i < cookieStringArray.length; i++){
-    if(cookieStringArray[i].indexOf(name) == 0){
-      return cookieStringArray[i].substring(name.length, cookieStringArray[i].length);
-    }
-  }
-}
-function getCookieBoolean(cookieName){
-  if(getCookie(cookieName)==="true"){
-    return true;
-  }
-  else if(getCookie(cookieName)==="false"){
-    return false;
-  }
-  else {
-    return undefined;
-  }
-}
-function closeCookiesNotice(){
-  document.getElementById("cookie-notice").style.transform = "translateY(100%)";
-}
 function animateHamburger(){
   if(!menuIsShowing){
     hamburgerTop.style.transform = "rotate(-45deg)";
@@ -267,6 +195,7 @@ function onScroll(){
   cancelTimer();
 }
 function cancelTimer(){
+  console.log("canceltimer")
   clearTimeout(modalAdTimer);
   modalAdTimer = setTimeout(()=>{
     openModal(modalAd);

@@ -176,63 +176,6 @@ header {
 }
 /*
 ====================
-==      Menu      ==
-====================
-*/
-/*
-===================
-==    Cookies    ==
-===================
-*/
-#cookie-notice{
-  border-top: 1px white solid;
-  box-shadow: -2px -2px 3px var(whiteMain);
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  background-color: #000e00;
-  color: white;
-  min-height: 80px;
-  width: 100%;
-  z-index: 3;
-  transition: all .5s;
-  animation: cookieEnter 3s ease-in-out;
-}
-#cookie-text{
-  padding: 4px 24px;
-  max-width: 800px;
-  margin: auto;
-}
-#cookie-notice h3{
-  color: white;
-  font-size: 24px;
-  text-align: center;
-}
-#cookie-notice p{
-  font-size: 13px;
-  text-align: center;
-}
-#cookie-buttons{
-  margin-bottom: 16px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-#cookie-buttons button{
-  font-size: 16px;
-}
-.green-text {
-  color: #0eff00;
-}
-.red-text{
-  color: #FFF100;
-}
-.fa-times {
-  font-size: 1.4em;
-}
-/*
-====================
 ==     Modals     ==
 ====================
 */
@@ -435,8 +378,8 @@ header {
   content:"";
   width:100%;
   height:100%;
-  background-color: #eeefee;
-  opacity: .7;
+  background-color: #ffffff;
+  opacity: .9;
   position:absolute;
   top:0;
   left:0;
