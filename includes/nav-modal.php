@@ -1,3 +1,5 @@
+<?php isset( $porto_is_allowed ) ? false : die( "You do not have authorization to view this page." ); ?>
+
 <div class="modal" id="modal-nav">
   <div class="modal-bg" id="modal-nav-bg"></div>
   <div class="modal-opaque"></div>

@@ -1,3 +1,5 @@
+<?php $porto_is_allowed = true; ?>
+
 <?php include_once 'includes/header.php';?>
 <div class="hero-image2 fade-in animated">
   <div class="hero-bg-mini" id="hero-work"></div>

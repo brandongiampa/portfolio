@@ -1,3 +1,5 @@
+<?php $porto_is_allowed = true; ?>
+
 <?php include_once 'includes/header.php';?>
 <?php
   $DB = DB::connect();

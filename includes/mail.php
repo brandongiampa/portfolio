@@ -1,3 +1,5 @@
+<?php isset( $porto_is_allowed ) ? false : die( "You do not have authorization to view this page." ); ?>
+
 <?php
   if(isset($_POST['submit-modal'])){
     $email = $_POST['email-modal'];

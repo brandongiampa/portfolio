@@ -1,3 +1,5 @@
+<?php isset( $porto_is_allowed ) ? false : die( "You do not have authorization to view this page." ); ?>
+
 <?php
 try{
     $db = DB::connect();
