@@ -28,7 +28,7 @@
     <?php echo $output['content'];?>
   </div>
   <div class="back-to-portfolio fade-in fast animated">
-    <a href="<?php  echo $site_url;?>portfolio">View Portfolio &rarr;</a>
+    <a href="<?php echo $site_url;?>portfolio">View Portfolio &rarr;</a>
   </div>
   <div class="about-b fade-in animated" id="technologies-used">
     <?php include_once 'includes/technologies-used.php';?>

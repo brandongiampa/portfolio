@@ -10,9 +10,9 @@
     <h2>What are you waiting for?</h2>
     <h4>Send Brandon a message right now!</h4>
     <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
-      <label for="email">Email</label><br>
+      <label for="email-modal">Email</label><br>
       <input type="email" name="email-modal" id="email-modal" required><br>
-      <label for="message">Message</label><br>
+      <label for="message-modal">Message</label><br>
       <textarea name="message-modal" id="message-modal" cols="30" rows="10" required></textarea><br>
       <input class="btn btn-purple" type="submit" value="Send" name="submit-modal">
     </form>

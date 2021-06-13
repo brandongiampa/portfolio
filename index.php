@@ -30,7 +30,7 @@
       <div class="hero-opaque"></div>
       <div class="hero-text">
         <h1>Do you need a website?</h1>
-        <p>Look no further.</p>
+        <h4>Look no further.</h4>
         <div class="hero-links">
           <a href="<?php  echo $site_url;?>portfolio" class="btn btn-purple">View Portfolio &raquo;</a>
         </div>
@@ -44,8 +44,8 @@
           <div class="underline"></div>
           <h3>Full Stack Web Developer</h3>
           <div class="social-links">
-            <a href="http://linkedin.com/brandongiampa"><i class="fab fa-linkedin"></i></a>
-            <a href="http://github.com/brandongiampa"><i class="fab fa-github"></i></a>
+            <a href="http://linkedin.com/brandongiampa"><i class="fab fa-linkedin"></i><span class="sr-only">Brandon's LinkedIn Profile URL</span></a>
+            <a href="http://github.com/brandongiampa"><i class="fab fa-github"></i><span class="sr-only">Brandon's GitHub URL</span></a>
           </div>
         </div>
         <div class="profile-img-div fade-from-right animated">
@@ -73,10 +73,11 @@
           <div class="work <?php echo $animationClass;?>" id="work-<?php echo $i+1;?>">
             <a href="<?php  echo $site_url;?>work/<?php echo $row['link'];?>">
               <img src="<?php  echo $site_url;?>img/<?php echo $row['img'];?>" alt="">
+              <span class="sr-only">View <?php echo $row['name']; ?> Info</span>
             </a>
             <div class="work-overlay">
               <div class="work-links">
-                <a href="<?php  echo $site_url;?>work/<?php echo $row['link'];?>" class="btn btn-transparent"><i class="fas fa-info-circle"></i>About</a>
+                <a href="<?php echo $site_url;?>work/<?php echo $row['link'];?>" class="btn btn-transparent"><i class="fas fa-info-circle"></i>About</a>
                 <a href="<?php echo $row['github'];?>" class="btn btn-transparent"><i class="fab fa-github"></i>Github</a>
                 <a href="<?php echo $row['url'];?>" class="btn btn-transparent"><i class="fas fa-eye"></i>View</a>
               </div>
@@ -88,7 +89,7 @@
       </div>
       <div class="link-strip fade-in fast animated">
         <h2>Do you want to view all of Brandon's work?</h2>
-        <a class="btn btn-purple" href="<?php  echo $site_url;?>portfolio">View Portfolio</a>
+        <a class="btn btn-purple" href="<?php echo $site_url;?>portfolio">View Portfolio</a>
       </div>
     </section>
     <section id="about-section">

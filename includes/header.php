@@ -38,5 +38,5 @@
         <div class="line" id="hamburger-bottom"></div>
       </div>
     </header>
-    <?php include_once 'nav-modal.php';?>
-    <?php include_once 'ad-modal.php';?>
+    <?php include_once __DIR__ . '/nav-modal.php';?>
+    <?php include_once __DIR__ . '/ad-modal.php';?>

@@ -19,13 +19,11 @@
     <?php
       if(isset($_GET['work'])):
 
-        $workName = $_GET['work'];
-
         $DB = DB::connect();
 
         try{
-          $query = $DB->prepare("SELECT * FROM project WHERE link = :workName LIMIT 1");
-          $query->bindParam(':workName', $workName, PDO::PARAM_STR);
+          $query = $DB->prepare("SELECT * FROM project WHERE link = :link LIMIT 1");
+          $query->bindParam(':link', $_GET[ 'work' ], PDO::PARAM_STR);
           $query->execute();
 
           if($query->rowCount() < 1){
@@ -34,6 +32,7 @@
 
           $row = $query->fetch(PDO::FETCH_ASSOC);
 
+          $workName = $row[ 'name' ];
           $workId = $row['id'];
           $tagline = $row['tagline'];
           $img_path = $row['img_path'];
@@ -124,7 +123,7 @@
         <?php
     ?>
     <div class="back-to-portfolio fade-in fast animated">
-      <a class="btn btn-purple" href="<?php  echo $site_url;?>portfolio">&larr; Back to Portfolio</a>
+      <a class="" href="<?php  echo $site_url;?>portfolio">&larr; Back to Portfolio</a>
     </div>
     <?php
   else:

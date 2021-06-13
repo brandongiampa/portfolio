@@ -7,7 +7,10 @@
   $_SESSION = array();
   session_destroy();
 ?>
-
+<div class="hero-image2 fade-in animated">
+  <div class="hero-bg-mini" id="hero-work"></div>
+  <div class="hero-opaque"></div>
+</div>
 <div class="container message-response">
   <p class="green-text"><?php echo $str;?></p>
   <a href="<?php  echo $site_url;?>" class="btn btn-purple">Home</a>

@@ -93,6 +93,10 @@ button:hover{
   max-width: 1280px;
   margin: auto;
 }
+.sr-only {
+  visibility: hidden;
+  position: absolute;
+}
 /*
 =====================
 ==     Headers     ==
@@ -428,12 +432,20 @@ header {
 */
 .work {
   position: relative;
-  padding: 0;
   margin: 0;
+  padding: 10px;
+  margin-bottom: 25px;
   width: 100%;
   border: none;
   overflow: hidden;
   box-sizing: border-box;
+}
+.img-carousel {
+  height: 100%;
+  padding-bottom: 45px;
+}
+.work > a > img, .img-carousel-wrap > img {
+  border: 1px #00000033 solid;
 }
 .work-overlay {
   font-size: 24px;
@@ -442,7 +454,7 @@ header {
   width: 100%;
   text-align: center;
   position: inline;
-  background-color: #008eff33;
+  background-color: #008effee;
   transform: translateY(100%);
   opacity: 0;
   transition: .2s all;
@@ -456,7 +468,7 @@ header {
   padding: 12px;
 }
 .work-links a {
-  color: #008eff;color: #ffefff;
+  color: #ffefff;
 }
 .work-overlay h3 {
   font-family: Oswald, sans-serif;
@@ -469,6 +481,8 @@ header {
   margin: 8px;
 }
 .link-strip {
+  margin-top: 60px;
+  margin-bottom: 30px;
   font-size:24px;
   color: #ffefff;
   background-color: #008eff;
@@ -484,6 +498,7 @@ header {
   color: #7100ff;
   font-weight: 300;
   font-size: 12px;
+  margin-bottom: 20px;
 }
 /*
 ==========================
@@ -513,6 +528,7 @@ header {
   justify-content: center;
   padding: 12px 16px;
   background-color: #eeefee;
+  margin-top: 45px;
 }
 .work-ul {
   flex-basis: 50%;
@@ -528,8 +544,12 @@ header {
   list-style: square;
 }
 .back-to-portfolio {
-  padding: 12px 0 8px 0;
+  padding: 25px 0 60px 0;
   text-align: center;
+}
+.back-to-portfolio > a {
+  color: #000eff;
+  font-size: 15px;
 }
 .work-display-links a:last-child, .work-display-links:last-child a i {
   color: #008eff;
@@ -617,8 +637,8 @@ input[type=submit]{
   margin-top: 12px;
 }
 .copyright {
-  padding: 8px;
-  font-size: 10px;
+  padding: 20px;
+  font-size: 12px;
   font-weight: 300;
 }
 /*
@@ -655,6 +675,10 @@ input[type=submit]{
 }
 #redirect {
   color: #333eff;
+}
+.message-response {
+  padding-bottom: 65px;
+  padding-top: 45px;
 }
 /*
 ================================
@@ -716,10 +740,13 @@ footer .fa-github:hover{
   .works{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
   }
   .work {
-    flex: 1;
+    /* flex: 1; */
+    padding: 0;
+    flex-basis: 49%;
   }
   .img-carousel{
     padding-right: 12px;
