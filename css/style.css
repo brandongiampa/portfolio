@@ -118,7 +118,10 @@ h3 {
   color: #555655;
 }
 h4 {
-  font-family: Caveat, cursive;
+  font-family: Oswald, cursive;
+  font-size: 22px;
+  font-weight: normal;
+  margin-top: 12px;
 }
 h5 {
   font-family: Caveat, cursive;
@@ -132,7 +135,7 @@ h6 {
   font-size: 11px;
 }
 p{
-  font-size:18;
+  font-size:18px;
 }
 /*
 =================
@@ -378,7 +381,7 @@ header {
   position:relative;
   background-color: #eeefee;
 }
-.profile-bg::before{
+/* .profile-bg::before{
   content:"";
   width:100%;
   height:100%;
@@ -387,7 +390,7 @@ header {
   position:absolute;
   top:0;
   left:0;
-}
+} */
 .profile {
   padding: 24px;
   display: flex;
@@ -561,7 +564,7 @@ header {
 */
 .about-section-text p {
   padding: 0 16px 16px 16px;
-  margin-bottom: 24px;
+  margin-bottom: 68px;
   font-size: 18px;
 }
 #technologies-used {
