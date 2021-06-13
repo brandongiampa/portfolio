@@ -12,7 +12,6 @@ var hamburgerTop;
 var hamburgerBottom;
 var xOuts;
 
-console.log( modalAdTimerMilliseconds )
 setUpDOMVariables();
 setSmoothScroll();
 animate();
@@ -27,7 +26,6 @@ if(redirect !== null){
 fixWorkLinkMobile()
 
 function openModal(modal){
-  console.log( "openmodal")
   modal.style.zIndex="5";
   modal.style.visibility = "visible";
   modal.style.opacity = 1;
@@ -55,7 +53,6 @@ function closeModal(e){
   }
 }
 function setUpModals(){
-  console.log(menuIsShowing)
   setTimeout(()=>{
     openModal(modalAd);
   }, modalAdTimerMilliseconds);
@@ -195,7 +192,6 @@ function onScroll(){
   cancelTimer();
 }
 function cancelTimer(){
-  console.log("canceltimer")
   clearTimeout(modalAdTimer);
   modalAdTimer = setTimeout(()=>{
     openModal(modalAd);
