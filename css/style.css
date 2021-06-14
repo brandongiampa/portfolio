@@ -517,6 +517,9 @@ header {
 ==         About        ==
 ==========================
 */
+.about-section-text h3 {
+  margin-left: 16px;
+}
 .about-section-text p {
   padding: 0 16px 16px 16px;
   font-size: 18px;
