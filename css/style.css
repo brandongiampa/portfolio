@@ -16,7 +16,7 @@ h3 {
 h4 {
   font-family: Oswald, sans-serif;
   font-size: 22px;
-  font-weight: normal;
+  font-weight: 400;
   margin-top: 12px;
 }
 h5 {
@@ -281,19 +281,19 @@ header {
   z-index: 0;
   height: 100%;
   width: 100%;
-  background-image: url(../img/collage-2layer-opt.jpg);
+  background-image: url(../img/collage-2layer-opt2.jpg);
   background-position: center;
   background-size: cover;
 }
 .hero-bg-small {
   height: 160px;
-  background-image: url(../img/collage-2layer-opt.jpg);
+  background-image: url(../img/collage-2layer-opt2.jpg);
   background-position: center;
   background-size: cover;
 }
 .hero-bg-mini {
   height: 80px;
-  background-image: url(../img/collage-2layer-opt.jpg);
+  background-image: url(../img/collage-2layer-opt2.jpg);
   background-position: center;
   background-size: cover;
 }
