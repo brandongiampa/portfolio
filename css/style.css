@@ -381,16 +381,6 @@ header {
   position:relative;
   background-color: #eeefee;
 }
-/* .profile-bg::before{
-  content:"";
-  width:100%;
-  height:100%;
-  background-color: #ffffff;
-  opacity: .9;
-  position:absolute;
-  top:0;
-  left:0;
-} */
 .profile {
   padding: 24px;
   display: flex;
@@ -747,7 +737,6 @@ footer .fa-github:hover{
     align-items: center;
   }
   .work {
-    /* flex: 1; */
     padding: 0;
     flex-basis: 49%;
   }
@@ -810,9 +799,6 @@ footer .fa-github:hover{
     background-color: #000eff;
     opacity: .6;
   }
-  #cookie-notice{
-    background-color: #000e00;
-  }
 }
 /************************
            Edge
@@ -821,9 +807,6 @@ footer .fa-github:hover{
   .hero-opaque{
     background-color: #000eff;
     opacity: .6;
-  }
-  #cookie-notice{
-    background-color: #000e00;
   }
   .modal-opaque{
     background-color: #000eff;
@@ -892,9 +875,4 @@ footer .fa-github:hover{
     opacity: 1;
     transform: translateY(0);
   }
-}
-@keyframes cookieEnter {
-  0% {transform: translateY(100%);}
-  70% {transform: translateY(100%);}
-  100% {transform: translateY(0);}
 }
