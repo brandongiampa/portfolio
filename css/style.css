@@ -267,10 +267,10 @@ header {
   color: white;
 }
 #modal-ad-bg{
-  background-image: url(../img/thinking.jpg);
+  background-image: url(../img/thinking-opt.jpg);
 }
 #modal-nav-bg{
-  background-image: url(../img/code-min.jpg);
+  background-image: url(../img/code-opt.jpg);
 }
 #modal-ad-content h4{
   font-size: 26px;
@@ -315,33 +315,33 @@ header {
   z-index: 0;
   height: 100%;
   width: 100%;
-  background-image: url(../img/collage-2layer-1-min.jpg);
+  background-image: url(../img/collage-2layer-opt.jpg);
   background-position: center;
   background-size: cover;
 }
 .hero-bg-small {
   height: 160px;
-  background-image: url(../img/collage-2layer-1-min.jpg);
+  background-image: url(../img/collage-2layer-opt.jpg);
   background-position: center;
   background-size: cover;
 }
 .hero-bg-mini {
   height: 80px;
-  background-image: url(../img/collage-2layer-1-min.jpg);
+  background-image: url(../img/collage-2layer-opt.jpg);
   background-position: center;
   background-size: cover;
 }
 #hero-portfolio {
-  background-image: url(../img/collage-coding-min.jpg);
+  background-image: url(../img/collage-coding-opt.jpg);
 }
 #hero-about {
-  background-image: url(../img/collage2-min.jpg);
+  background-image: url(../img/collage2-opt.jpg);
 }
 #hero-work {
-  background-image: url(../img/collage-thin-min.jpg);
+  background-image: url(../img/collage-thin-opt.jpg);
 }
 #hero-404{
-  background-image: url(../img/collage404-min.jpg);
+  background-image: url(../img/collage404-opt.jpg);
 }
 .hero-opaque {
   position: absolute;
