@@ -7,7 +7,7 @@ $message;
 
 if ( isset( $_POST[ 'submit-modal' ] ) || isset( $_POST[ 'submit-footer' ] ) ) {
 
-    if ( isset( $_POST[ 'email-modal' ] ) && isset( $_POST[ 'message-footer' ] ) ) {
+    if ( isset( $_POST[ 'email-modal' ] ) && isset( $_POST[ 'message-modal' ] ) ) {
 
       $email_address = $_POST[ 'email-modal' ];
       $message = $_POST[ 'message-modal' ];
