@@ -12,18 +12,59 @@ var hamburgerTop;
 var hamburgerBottom;
 var xOuts;
 
-setUpDOMVariables();
-setSmoothScroll();
-animate();
-window.addEventListener('scroll', onScroll);
-window.addEventListener('resize', onResize);
+const setUpPage = new Promise( ( resolve ) => {
 
-setUpModals();
+  setUpDOMVariables();
+  setSmoothScroll();
+  animate();
+  window.addEventListener('scroll', onScroll);
+  window.addEventListener('resize', onResize);
+  
+  setUpModals();
+  
+  if(redirect !== null){
+    setUpRedirect(5);
+  }
+  fixWorkLinkMobile()
 
-if(redirect !== null){
-  setUpRedirect(5);
+  resolve()
+
+} )
+
+setUpPage.then( () => {
+
+  setModalNavBackgroundImage()
+
+} )
+.then( () => {
+
+  setModalAdBackgroundImage()
+
+} )
+
+function setModalAdBackgroundImage() {
+
+  //check for img carousel in DOM, means page is work/workname, read as one directory up
+  const imgCarousel = document.getElementsByClassName( "img-carousel" )
+  //set directory according to whether or not is work page
+  const directory = imgCarousel.length > 0 ? "../img/" : "img/"
+  const modalAdBG = document.getElementById( "modal-ad-bg" )
+
+  modalAdBG.style.backgroundImage = `url( '${ directory }thinking-opt.jpg' )`
+
 }
-fixWorkLinkMobile()
+
+function setModalNavBackgroundImage() {
+
+  //check for img carousel in DOM, means page is work/workname, read as one directory up
+  const imgCarousel = document.getElementsByClassName( "img-carousel" )
+  //set directory according to whether or not is work page
+  const directory = imgCarousel.length > 0 ? "../img/" : "img/"
+  const modalNavBG = document.getElementById( "modal-nav-bg" )
+
+  modalNavBG.style.backgroundImage = `url( '${ directory }code-opt.jpg' )`
+
+}
 
 function openModal(modal){
   modal.style.zIndex="5";

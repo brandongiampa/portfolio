@@ -8,7 +8,7 @@
 <html lang="en">
 <head>
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-  <link href="https://fonts.googleapis.com/css?family=Caveat|Fascinate|Oswald:300,400,500,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Caveat|Fascinate|Oswald:400,500,600&display=block" rel="stylesheet">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +18,7 @@
   <meta name="keywords" content="Web Developer, Full Stack Developer, Front End Developer, PHP Developer, Wordpress Developer, Orange County, Los Angeles, Brandon Giampa, Brandon Jump">
   <meta name="description" content="Full Stack Web Developer Portfolio of Brandon Giampa">
   <meta name="author" content="Brandon Giampa">
-  <link rel="icon" href="../icons/icon2.png">
+  <link rel="icon" href="icons/icon2-opt.jpg">
 </head>
 <body>
   <main>

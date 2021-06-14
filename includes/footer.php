@@ -24,7 +24,7 @@
   </div>
 </footer>
 </main>
-<?php $jsFile = !isset($_GET['work']) ? "js/main.js" : "../js/main-min.js"; ?>
-<script src="<?php echo $jsFile;?>" type="text/javascript" defer></script>
+<?php $directory = !isset( $_GET[ 'work' ] ) ? "js/" : "../js/"; ?>
+<script src="<?php echo $directory; ?>main.js" type="text/javascript" defer></script>
 </body>
 </html>
