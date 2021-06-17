@@ -32,6 +32,13 @@
 
           $row = $query->fetch(PDO::FETCH_ASSOC);
 
+          if ( !$row ) {
+
+            header('Location: ' . $site_url . "404" );
+            exit;            
+
+          }
+
           $workName = $row[ 'name' ];
           $workId = $row['id'];
           $tagline = $row['tagline'];
@@ -39,7 +46,6 @@
           $url = $row['url'];
           $slug = 'https://brandongiampa.com/' . $row[ 'slug' ];
           $github = $row['github'];
-          $img = $site_url . 'img/' . $row['img'];
           $objective = $row['objective'];
 
           $hashtags = $query->fetch(PDO::FETCH_ASSOC);
