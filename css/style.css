@@ -281,33 +281,27 @@ header {
   z-index: 0;
   height: 100%;
   width: 100%;
-  background-image: url(../img/collage-2layer-opt2.jpg);
+  background-image: url(https://imgur.com/8VLxmaI.jpg);
   background-position: center;
   background-size: cover;
 }
 .hero-bg-small {
   height: 160px;
-  background-image: url(../img/collage-2layer-opt2.jpg);
+  background-image: url(https://imgur.com/kCaJUL9.jpg);
   background-position: center;
   background-size: cover;
 }
 .hero-bg-mini {
   height: 80px;
-  background-image: url(../img/collage-2layer-opt2.jpg);
+  background-image: url(https://imgur.com/Q4p6ou8.jpg);
   background-position: center;
   background-size: cover;
 }
-#hero-portfolio {
-  background-image: url(../img/collage-coding-opt2.jpg);
-}
-#hero-about {
-  background-image: url(../img/collage2-opt.jpg);
-}
-#hero-work {
-  background-image: url(../img/collage-thin-opt.jpg);
+#hero-portfolio, #hero-about, #hero-work {
+  background-image: url(https://imgur.com/7VY6ozL.jpg);
 }
 #hero-404{
-  background-image: url(../img/collage404-opt.jpg);
+  background-image: url(https://imgur.com/fq5VOYx.jpg);
 }
 .hero-opaque {
   position: absolute;

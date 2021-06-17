@@ -36,7 +36,7 @@
 ?>
 
 <div class="hero-image2 fade-in animated">
-  <div class="hero-bg-small" id="hero-portfolio"></div>
+  <div class="hero-bg-mini" id="hero-portfolio"></div>
   <div class="hero-opaque"></div>
 </div>
 <section id="portfolio-section">

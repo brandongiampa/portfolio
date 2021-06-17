@@ -1,3 +1,7 @@
+const MODAL_NAV_BACKGROUND_IMAGE = 'https://imgur.com/Lr9WKRe.jpg'
+const MODAL_AD_BACKGROUND_IMAGE = 'https://imgur.com/0TJBJRl.jpg'
+
+
 var isScrolling = false;
 var menuIsShowing = false;
 var modalAd;
@@ -50,7 +54,7 @@ function setModalAdBackgroundImage() {
   const directory = imgCarousel.length > 0 ? "../img/" : "img/"
   const modalAdBG = document.getElementById( "modal-ad-bg" )
 
-  modalAdBG.style.backgroundImage = `url( '${ directory }thinking-opt.jpg' )`
+  modalAdBG.style.backgroundImage = `url( ${ MODAL_AD_BACKGROUND_IMAGE } )`
 
 }
 
@@ -62,7 +66,7 @@ function setModalNavBackgroundImage() {
   const directory = imgCarousel.length > 0 ? "../img/" : "img/"
   const modalNavBG = document.getElementById( "modal-nav-bg" )
 
-  modalNavBG.style.backgroundImage = `url( '${ directory }code-opt.jpg' )`
+  modalNavBG.style.backgroundImage = `url( ${ MODAL_NAV_BACKGROUND_IMAGE } )`
 
 }
 

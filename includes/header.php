@@ -14,11 +14,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Brandon Giampa - Web Developer</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="<?php  echo $site_url;?>css/style-min.css" type="text/css">
+  <link rel="stylesheet" href="<?php echo $site_url;?>css/style-min.css" type="text/css">
   <meta name="keywords" content="Web Developer, Full Stack Developer, Front End Developer, PHP Developer, Wordpress Developer, Orange County, Los Angeles, Brandon Giampa, Brandon Jump">
   <meta name="description" content="Full Stack Web Developer Portfolio of Brandon Giampa">
   <meta name="author" content="Brandon Giampa">
-  <link rel="icon" href="<?php echo $site_url; ?>icons/icon2-opt.jpg">
+  <link rel="icon" href="https://imgur.com/3txobOf">
 </head>
 <body>
   <main>

@@ -14,7 +14,7 @@ try{
         extract($row);
     ?>
     <div class="technology">
-      <img src="icons/<?php echo $icon;?>" alt=""><br>
+      <img src="<?php echo $icon;?>" alt=""><br>
       <?php echo $name;?>
     </div>
     <?php

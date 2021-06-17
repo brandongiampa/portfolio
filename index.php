@@ -49,7 +49,7 @@
           </div>
         </div>
         <div class="profile-img-div fade-from-right animated">
-          <img src="<?php echo $site_url;?>img/face-opt.jpg" class="profile-img" alt="">
+          <img src="https://imgur.com/8V6vW0s.jpg" class="profile-img" alt="">
         </div>
       </div>
     </div>
