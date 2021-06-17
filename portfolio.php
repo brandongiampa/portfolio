@@ -17,7 +17,7 @@
     $projectMessage = '';
 
     $query = $DB->prepare(
-      'SELECT id, name, url, link, github, img_path FROM project ORDER BY id DESC LIMIT :limit OFFSET :offset'
+      'SELECT id, name, url, slug, github, img_path FROM project ORDER BY id DESC LIMIT :limit OFFSET :offset'
     );
     $query->bindParam(':limit', $upperLimit, PDO::PARAM_INT);
     $query->bindParam(':offset', $offset, PDO::PARAM_INT);
@@ -53,12 +53,12 @@
         $animationClass = $i % 2 === 0 ? 'fade-from-left animated' : 'fade-from-right animated';
       ?>
       <div class="work <?php echo $animationClass;?>" id="work-<?php echo $i+1;?>">
-        <a href="<?php  echo $site_url;?>work/<?php echo $row['link'];?>">
+        <a href="<?php  echo $site_url;?>work/<?php echo $row['slug'];?>">
           <img src="<?php echo $row[ 'img_path' ];?>" alt="">
         </a>
         <div class="work-overlay">
           <div class="work-links">
-            <a href="<?php echo $site_url;?>work/<?php echo $row['link'];?>" class="btn btn-transparent"><i class="fas fa-info-circle"></i>About</a>
+            <a href="<?php echo $site_url;?>work/<?php echo $row[ 'slug' ];?>" class="btn btn-transparent"><i class="fas fa-info-circle"></i>About</a>
             <a href="<?php echo $row['github'];?>" class="btn btn-transparent"><i class="fab fa-github"></i>Github</a>
             <a href="<?php echo $row['url'];?>" class="btn btn-transparent"><i class="fas fa-eye"></i>View</a>
           </div>

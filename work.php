@@ -22,8 +22,8 @@
         $DB = DB::connect();
 
         try{
-          $query = $DB->prepare("SELECT * FROM project WHERE link = :link LIMIT 1");
-          $query->bindParam(':link', $_GET[ 'work' ], PDO::PARAM_STR);
+          $query = $DB->prepare("SELECT * FROM project WHERE slug = :slug LIMIT 1");
+          $query->bindParam(':slug', $_GET[ 'work' ], PDO::PARAM_STR);
           $query->execute();
 
           if($query->rowCount() < 1){
@@ -37,7 +37,7 @@
           $tagline = $row['tagline'];
           $img_path = $row['img_path'];
           $url = $row['url'];
-          $link = 'https://brandongiampa.com/' . $row['link'];
+          $slug = 'https://brandongiampa.com/' . $row[ 'slug' ];
           $github = $row['github'];
           $img = $site_url . 'img/' . $row['img'];
           $objective = $row['objective'];
@@ -123,7 +123,7 @@
         <?php
     ?>
     <div class="back-to-portfolio fade-in fast animated">
-      <a class="" href="<?php  echo $site_url;?>portfolio">&larr; Back to Portfolio</a>
+      <a class="" href="<?php echo $site_url;?>portfolio">&larr; Back to Portfolio</a>
     </div>
     <?php
   else:
