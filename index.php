@@ -9,7 +9,7 @@
 
   try{
     $query = $DB->prepare(
-      'SELECT id, name, link, url, github, img FROM project ORDER BY id DESC LIMIT :limit'
+      'SELECT id, name, link, url, github, img_path FROM project ORDER BY id DESC LIMIT :limit'
     );
     $query->bindParam(':limit', $upperLimit, PDO::PARAM_INT);
     $query->execute();
@@ -72,7 +72,7 @@
           ?>
           <div class="work <?php echo $animationClass;?>" id="work-<?php echo $i+1;?>">
             <a href="<?php  echo $site_url;?>work/<?php echo $row['link'];?>">
-              <img src="<?php  echo $site_url;?>img/<?php echo $row['img'];?>" alt="">
+              <img src="<?php echo $row[ 'img_path' ];?>" alt="<?php echo $row[ 'name' ];?>">
               <span class="sr-only">View <?php echo $row['name']; ?> Info</span>
             </a>
             <div class="work-overlay">
