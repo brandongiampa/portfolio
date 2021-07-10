@@ -107,7 +107,7 @@
 
           $output = $query->fetch(PDO::FETCH_ASSOC);
         ?>
-        <p><?php echo $output['excerpt'];?>... <a href="<?php  echo $site_url;?>about">Learn more</a></p>
+        <p><?php echo $output['excerpt'];?>... <a href="<?php echo $site_url;?>about">Learn more</a></p>
       </div>
       <div class="about-b fade-in animated" id="technologies-used">
         <?php include_once 'includes/technologies-used.php';?>
